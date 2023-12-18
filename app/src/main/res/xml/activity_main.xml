@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- HorizontalScrollView para la lista de loterías -->
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <!-- LinearLayout que contiene los elementos de la lista -->
+        <LinearLayout
+            android:id="@+id/lotteryListLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- Aquí se agregarán dinámicamente las vistas de lotería -->
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- EditText para el nombre de la lotería -->
+    <EditText
+        android:id="@+id/editTextLoteria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horizontalScrollView"
+        android:hint="Nombre de la lotería"/>
+
+    <!-- EditText para el dinero apostado -->
+    <EditText
+        android:id="@+id/editTextDineroApostado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLoteria"
+        android:hint="Dinero apostado"/>
+
+    <!-- Botón para apostar -->
+    <Button
+        android:id="@+id/botonApostar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDineroApostado"
+        android:text="Apostar"/>
+
+    <!-- Botón para jugar lotería escrita -->
+    <Button
+        android:id="@+id/botonJugarLoteria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/botonApostar"
+        android:text="Jugar Lotería Escrita"/>
+
+    <!-- TextView para mostrar el resultado -->
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/botonJugarLoteria"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Botón para cambiar de pantalla -->
+    <Button
+        android:id="@+id/botonCambiarPantalla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewResultado"
+        android:layout_marginTop="16dp"
+        android:text="Cambiar de Pantalla"/>
+
+    <activity android:name=".NuevaPantallaActivity">
+    </activity>
+
+</RelativeLayout>
